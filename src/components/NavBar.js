@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-const Navbar = () => {
+const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
@@ -85,4 +85,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
