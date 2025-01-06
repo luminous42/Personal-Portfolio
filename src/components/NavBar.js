@@ -106,5 +106,5 @@ import navIcon3 from '../assets/img/nav-icon3.svg';
 // };
 
 export const NavBar = () => {
-  return 'nav bar';
+  return 'i need to add a navbar over here by tommorow.';
 };
