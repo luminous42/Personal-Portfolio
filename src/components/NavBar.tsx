@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const NavBar = () => {
@@ -6,11 +7,11 @@ const NavBar = () => {
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <span className="text-2xl text-black font-semibold">Portfolio</span>
-          <div className="flex space-x-4 text-black">
-            <a href="#">Dashboard</a>
-            <a href="#">About</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
+          <div className="flex space-x-14 text-black">
+            <Link href="#">Home</Link>
+            <Link href="#">About</Link>
+            <Link href="#">Projects</Link>
+            <Link href="#">Contact</Link>
           </div>
         </div>
       </div>
