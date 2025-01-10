@@ -15,7 +15,10 @@ const Contact = () => {
         feedback, please use the form below.
       </p>
 
-      <form action="post" className="max-w-2xl mx-auto">
+      <form
+        action="post"
+        className="max-w-2xl mx-auto"
+      >
         <div className="grid grid-cols-auto gap-6 mt-10 mb-8">
           <input
             type="text"
@@ -46,7 +49,11 @@ const Contact = () => {
           hover:bg-black duration-500 "
         >
           Submit now
-          <Image src={assets.right_arrow_white} alt="" className="w-4" />
+          <Image
+            src={assets.right_arrow_white}
+            alt=""
+            className="w-4"
+          />
         </button>
         <p className="mt-4">sending...</p>
       </form>

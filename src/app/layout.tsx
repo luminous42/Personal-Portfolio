@@ -23,7 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html
+      lang="en"
+      className="scroll-smooth"
+    >
       <body
         className={`${Outfitlocal.className} ${Ovolocal.className} antialiased leading-8 overflow-x-hidden`}
       >

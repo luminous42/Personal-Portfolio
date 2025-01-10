@@ -1,10 +1,11 @@
+import Image from "next/image";
 import React from "react";
 
 const Dashboard = () => {
   return (
     <div className="flex items-center h-1/2 ml-7">
       <div className="w-1/4 mt-52 mx-10">
-        <img
+        <Image
           src="/img/cover-photo.jpg"
           className=" object-contain "
           alt="cover photo"
