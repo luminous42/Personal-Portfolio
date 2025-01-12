@@ -25,10 +25,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="scroll-smooth"
+      className="scroll-smooth dark"
     >
       <body
-        className={`${Outfitlocal.className} ${Ovolocal.className} antialiased leading-8 overflow-x-hidden`}
+        className={`${Outfitlocal.className} ${Ovolocal.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme
+        dark:text-white`}
       >
         {children}
       </body>
