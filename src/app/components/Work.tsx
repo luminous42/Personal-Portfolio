@@ -1,8 +1,10 @@
 import React from "react";
 import { assets, workData } from "../../../assets/assets";
 import Image from "next/image";
-
-const Work = () => {
+interface NavBarProps {
+  isDarkMode: boolean;
+}
+const Work: React.FC<NavBarProps> = ({ isDarkMode }) => {
   return (
     <div
       id="work"

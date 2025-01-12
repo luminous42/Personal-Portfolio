@@ -1,8 +1,12 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { assets } from "../../../assets/assets";
+interface NavBarProps {
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-const NavBar = ({ isDarkMode, setIsDarkMode }) => {
+const NavBar: React.FC<NavBarProps> = ({ isDarkMode, setIsDarkMode }) => {
   const [isScroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef<HTMLUListElement>(null);
   const openMenu = () => {

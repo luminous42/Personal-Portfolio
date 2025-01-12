@@ -1,7 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import { assets } from "../../../assets/assets";
-
+interface NavBarProps {
+  isDarkMode: boolean;
+}
 const Footer = () => {
   return (
     <div className="mt-20">

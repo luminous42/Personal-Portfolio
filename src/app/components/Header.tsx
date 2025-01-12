@@ -1,8 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import { assets } from "../../../assets/assets";
-
-const Header = () => {
+interface NavBarProps {
+  isDarkMode: boolean;
+}
+const Header: React.FC<NavBarProps> = ({ isDarkMode }) => {
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
       <div>
