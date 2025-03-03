@@ -38,6 +38,32 @@ html {
 }
 
 /* Transition for dark mode */
-body {
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+body,
+a,
+button,
+input,
+textarea {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+}
+
+/* Dark mode text colors */
+.dark text,
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: white;
+}
+
+/* Dark mode background colors */
+.dark .bg-white {
+  background-color: var(--darkTheme);
+}
+
+/* Dark mode hover states */
+.dark .hover\:bg-lightHover:hover {
+  background-color: var(--darkHover);
 }

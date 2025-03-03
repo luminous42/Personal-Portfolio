@@ -6,17 +6,17 @@ interface NavBarProps {
 }
 const Footer: React.FC<NavBarProps> = ({ isDarkMode }) => {
   return (
-    <div className="mt-20">
+    <div className="mt-20 bg-white dark:bg-darkTheme transition-colors duration-300">
       <div className="text-center">
         <Image
           src={isDarkMode ? assets.logo_dark : assets.logo}
-          alt=""
+          alt="Logo"
           className="w-36 mx-auto mb-2"
         />
         <div className="w-max flex items-center gap-2 mx-auto">
           <Image
             src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon}
-            alt=""
+            alt="Email"
             className="w-6"
           />
           lumi9259@gmail.com
@@ -29,22 +29,13 @@ const Footer: React.FC<NavBarProps> = ({ isDarkMode }) => {
       >
         <p>2025 Luminous Suwal. All rights reserved.</p>
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0 ">
-          <a
-            target="_blank"
-            href="https://github.com/luminous42"
-          >
+          <a target="_blank" href="https://github.com/luminous42">
             GitHub
           </a>
-          <a
-            target="_blank"
-            href="https://github.com/luminous42"
-          >
+          <a target="_blank" href="https://github.com/luminous42">
             Linkedin
           </a>
-          <a
-            target="_blank"
-            href="https://github.com/luminous42"
-          >
+          <a target="_blank" href="https://github.com/luminous42">
             Instagram
           </a>
         </ul>

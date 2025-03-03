@@ -132,6 +132,24 @@ const About: React.FC<NavBarProps> = ({ isDarkMode }) => {
           </motion.ul>
         </motion.div>
       </motion.div>
+      <motion.div className="text-center mt-12">
+        <motion.a
+          href="/about"
+          whileHover={{ scale: 1.05 }}
+          className="inline-flex items-center gap-2 px-8 py-3 border border-gray-500 rounded-full hover:bg-lightHover dark:hover:bg-darkHover transition-colors"
+        >
+          View Full Profile
+          <Image
+            src={
+              isDarkMode
+                ? assets.right_arrow_bold_dark
+                : assets.right_arrow_bold
+            }
+            alt="Right arrow"
+            className="w-4"
+          />
+        </motion.a>
+      </motion.div>
     </motion.div>
   );
 };

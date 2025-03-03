@@ -34,24 +34,20 @@ const NavBar: React.FC<NavBarProps> = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <>
       <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
-        <Image
-          src={assets.header_bg_color}
-          alt=""
-          className="w-full"
-        />
+        <Image src={assets.header_bg_color} alt="" className="w-full" />
       </div>
       <nav
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
           isScroll
-            ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20"
+            ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme/50 dark:shadow-white/20"
             : ""
         }`}
       >
-        <a href="#top">
+        <a href="/">
           <Image
             src={isDarkMode ? assets.logo_dark : assets.logo}
             className="w-28 cursor-pointer mr-14"
-            alt=""
+            alt="Logo"
           />
         </a>
         <ul
@@ -62,52 +58,40 @@ const NavBar: React.FC<NavBarProps> = ({ isDarkMode, setIsDarkMode }) => {
           }`}
         >
           <li>
-            <a
-              href="#top"
-              className="font-Ovo"
-            >
+            <a href="/" className="font-Ovo">
               Home
             </a>
           </li>
           <li>
-            <a
-              href="#about"
-              className="font-Ovo"
-            >
+            <a href="/about" className="font-Ovo">
               About me
             </a>
           </li>
           <li>
-            <a
-              href="#services"
-              className="font-Ovo"
-            >
+            <a href="/services" className="font-Ovo">
               Services
             </a>
           </li>
           <li>
-            <a
-              href="#work"
-              className="font-Ovo"
-            >
+            <a href="/work" className="font-Ovo">
               My Work
             </a>
           </li>
           <li>
-            <a
-              href="#contact"
-              className="font-Ovo"
-            >
+            <a href="/contact" className="font-Ovo">
               Contact me
             </a>
           </li>
         </ul>
         <div className="flex items-center gap-4">
-          <button onClick={() => setIsDarkMode((prev) => !prev)}>
+          <button
+            onClick={() => setIsDarkMode((prev) => !prev)}
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-darkHover transition-colors"
+          >
             <Image
               src={isDarkMode ? assets.sun_icon : assets.moon_icon}
               className="w-6"
-              alt=""
+              alt="Theme toggle"
             />
           </button>
           <a
@@ -123,10 +107,7 @@ const NavBar: React.FC<NavBarProps> = ({ isDarkMode, setIsDarkMode }) => {
             />
           </a>
 
-          <button
-            className="block md:hidden ml-3"
-            onClick={openMenu}
-          >
+          <button className="block md:hidden ml-3" onClick={openMenu}>
             <Image
               src={isDarkMode ? assets.menu_white : assets.menu_black}
               alt=""
@@ -141,10 +122,7 @@ const NavBar: React.FC<NavBarProps> = ({ isDarkMode, setIsDarkMode }) => {
           className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500
           dark:bg-darkHover dark:text-white"
         >
-          <div
-            className="absolute top-6 right-6"
-            onClick={closeMenu}
-          >
+          <div className="absolute top-6 right-6" onClick={closeMenu}>
             <Image
               src={isDarkMode ? assets.close_white : assets.close_black}
               alt=""
@@ -152,47 +130,27 @@ const NavBar: React.FC<NavBarProps> = ({ isDarkMode, setIsDarkMode }) => {
             />
           </div>
           <li>
-            <a
-              href="#top"
-              className="font-Ovo"
-              onClick={closeMenu}
-            >
+            <a href="#top" className="font-Ovo" onClick={closeMenu}>
               Home
             </a>
           </li>
           <li>
-            <a
-              href="#about"
-              className="font-Ovo"
-              onClick={closeMenu}
-            >
+            <a href="#about" className="font-Ovo" onClick={closeMenu}>
               About me
             </a>
           </li>
           <li>
-            <a
-              href="#services"
-              className="font-Ovo"
-              onClick={closeMenu}
-            >
+            <a href="#services" className="font-Ovo" onClick={closeMenu}>
               Services
             </a>
           </li>
           <li>
-            <a
-              href="#work"
-              className="font-Ovo"
-              onClick={closeMenu}
-            >
+            <a href="#work" className="font-Ovo" onClick={closeMenu}>
               My Work
             </a>
           </li>
           <li>
-            <a
-              href="#contact"
-              className="font-Ovo"
-              onClick={closeMenu}
-            >
+            <a href="#contact" className="font-Ovo" onClick={closeMenu}>
               Contact me
             </a>
           </li>

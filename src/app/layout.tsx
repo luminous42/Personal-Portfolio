@@ -50,7 +50,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${Outfitlocal.variable} ${Ovolocal.variable} transition-colors duration-300`}
+        className={`${Outfitlocal.variable} ${Ovolocal.variable} 
+        transition-colors duration-300 bg-white dark:bg-darkTheme`}
       >
         {children}
       </body>
