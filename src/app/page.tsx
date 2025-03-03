@@ -8,19 +8,13 @@ import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-const page = () => {
+const Page = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    if (
-      localStorage.theme == "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      setIsDarkMode(true);
-    } else {
-      setIsDarkMode(false);
-    }
+    // Check initial dark mode state
+    const isDark = document.documentElement.classList.contains("dark");
+    setIsDarkMode(isDark);
   }, []);
 
   useEffect(() => {
@@ -29,25 +23,21 @@ const page = () => {
       localStorage.theme = "dark";
     } else {
       document.documentElement.classList.remove("dark");
-      localStorage.theme = "";
+      localStorage.theme = "light";
     }
   }, [isDarkMode]);
+
   return (
-    <div>
-      <>
-        <NavBar
-          isDarkMode={isDarkMode}
-          setIsDarkMode={setIsDarkMode}
-        />
-        <Header isDarkMode={isDarkMode} />
-        <About isDarkMode={isDarkMode} />
-        <Services isDarkMode={isDarkMode} />
-        <Work isDarkMode={isDarkMode} />
-        <Contact isDarkMode={isDarkMode} />
-        <Footer isDarkMode={isDarkMode} />
-      </>
+    <div className="bg-white text-gray-900 dark:bg-darkTheme dark:text-white transition-colors duration-300">
+      <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <Header isDarkMode={isDarkMode} />
+      <About isDarkMode={isDarkMode} />
+      <Services isDarkMode={isDarkMode} />
+      <Work isDarkMode={isDarkMode} />
+      <Contact isDarkMode={isDarkMode} />
+      <Footer isDarkMode={isDarkMode} />
     </div>
   );
 };
 
-export default page;
+export default Page;
