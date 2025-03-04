@@ -41,7 +41,7 @@ import tailwind from "./tailwind.png";
 import NETCore from "./NETCore.png";
 import mysql from "./mysql.png";
 import python from "./python.png";
-import NodeJS from "./NodeJS.png";
+import NodeJS from "./nodejs.png";
 import ssms from "./ssms.png";
 import docker from "./docker.png";
 import aws from "./aws.png";
