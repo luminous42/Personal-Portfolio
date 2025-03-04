@@ -104,21 +104,29 @@ export const workData = [
     title: "Frontend project",
     description: "Web Design",
     bgImage: "/work-1.png",
+    demoLink: "https://frontend-project-one-black.vercel.app/",
+    githubLink: "https://github.com/your-repo/frontend-project-one",
   },
   {
     title: "Geo based app",
     description: "Mobile App",
     bgImage: "/work-2.png",
+    demoLink: "https://geo-based-app-one.vercel.app/",
+    githubLink: "https://github.com/your-repo/geo-based-app-one",
   },
   {
     title: "Photography site",
     description: "Web Design",
     bgImage: "/work-3.png",
+    demoLink: "https://photography-site-one.vercel.app/",
+    githubLink: "https://github.com/your-repo/photography-site-one",
   },
   {
     title: "UI/UX designing",
     description: "UI/UX Design",
     bgImage: "/work-4.png",
+    demoLink: "https://ui-ux-designing-one.vercel.app/",
+    githubLink: "https://github.com/your-repo/ui-ux-designing-one",
   },
 ];
 
