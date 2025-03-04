@@ -29,15 +29,33 @@ export default function RootLayout({
 }) {
   useEffect(() => {
     // Handle initial dark mode
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    const setInitialTheme = () => {
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    };
+
+    setInitialTheme();
+
+    // Listen for system theme changes
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (!("theme" in localStorage)) {
+        if (e.matches) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
 
     // Scroll to top on page reload
     if (typeof window !== "undefined") {
@@ -45,6 +63,8 @@ export default function RootLayout({
         window.scrollTo(0, 0);
       };
     }
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
   return (

@@ -85,7 +85,7 @@ export default function AboutPage() {
                     className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg flex items-center justify-center"
                     whileHover={{ scale: 1.05 }}
                   >
-                    <Image src={tool} alt="Tool" className="w-8 h-8" />
+                    <Image src={tool.icon} alt="Tool" className="w-8 h-8" />
                   </motion.div>
                 ))}
               </div>

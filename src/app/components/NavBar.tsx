@@ -85,7 +85,19 @@ const NavBar: React.FC<NavBarProps> = ({ isDarkMode, setIsDarkMode }) => {
         </ul>
         <div className="flex items-center gap-4">
           <button
-            onClick={() => setIsDarkMode((prev) => !prev)}
+            onClick={() => {
+              setIsDarkMode((prev) => {
+                const newValue = !prev;
+                if (newValue) {
+                  document.documentElement.classList.add("dark");
+                  localStorage.theme = "dark";
+                } else {
+                  document.documentElement.classList.remove("dark");
+                  localStorage.theme = "light";
+                }
+                return newValue;
+              });
+            }}
             className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-darkHover transition-colors"
           >
             <Image

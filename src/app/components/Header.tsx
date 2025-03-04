@@ -15,11 +15,7 @@ const Header: React.FC<NavBarProps> = ({ isDarkMode }) => {
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
       >
-        <Image
-          src={assets.profile_img}
-          alt=""
-          className="rounded-full w-32"
-        />
+        <Image src={assets.profile_img} alt="" className="rounded-full w-32" />
       </motion.div>
       <motion.h3
         initial={{
@@ -31,11 +27,7 @@ const Header: React.FC<NavBarProps> = ({ isDarkMode }) => {
         className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo"
       >
         Hi! I'm Luminous Suwal
-        <Image
-          src={assets.hand_icon}
-          alt=""
-          className="w-6"
-        />
+        <Image src={assets.hand_icon} alt="" className="w-6" />
       </motion.h3>
       <motion.h1
         initial={{
@@ -57,7 +49,7 @@ const Header: React.FC<NavBarProps> = ({ isDarkMode }) => {
         className="max-w-2xl mx-auto font-Ovo"
       >
         I am a full stack developer from Kathmandu, Nepal with experience of 1+
-        year of experience in companies like Tulips Technology.
+        year of experience in Tulips Technologies.
       </motion.p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <motion.a
@@ -72,11 +64,7 @@ const Header: React.FC<NavBarProps> = ({ isDarkMode }) => {
           dark:bg-transparent"
         >
           contact me
-          <Image
-            src={assets.right_arrow_white}
-            alt=""
-            className="w-4"
-          />
+          <Image src={assets.right_arrow_white} alt="" className="w-4" />
         </motion.a>
         <motion.a
           initial={{
@@ -87,14 +75,10 @@ const Header: React.FC<NavBarProps> = ({ isDarkMode }) => {
           transition={{ duration: 0.6, delay: 1.2 }}
           href="/sample-resume.pdf"
           download
-          className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black"
+          className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:bg-white dark:text-black hover:bg-gray-100 dark:hover:bg-gray-200 transition-colors"
         >
           my resume
-          <Image
-            src={assets.download_icon}
-            alt=""
-            className="w-4"
-          />
+          <Image src={assets.download_icon} alt="" className="w-4" />
         </motion.a>
       </div>
     </div>
